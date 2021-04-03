@@ -1,8 +1,12 @@
-# POO-Basic
+# POO-Basic Part 2
+Créer ta première classe enfant,
 
-Qu'est-ce que la POO ?
-La Programmation Orientée Objet ou POO est un "paradigme" de programmation, né dans les années 60.
+Après les classes Car et Bicycle, tu dois créer une classe permettant de manipuler un objet camion.
 
-Il n’est possible en PHP de faire de la programmation orientée objet que depuis ses dernières versions (php5). 
-Même si le langage permet de continuer à coder en procédural, il est important de savoir développer en pensant objet. 
-Les applications n'en seront que plus robustes, fiables, et évolutives !
+Un camion est un enfant de Vehicle et a des propriétés spécifiques :
+
+-sa capacité de stockage. -son chargement, qui est initialement à zéro.
+
+La capacité de stockage doit être saisie au moment de l'Instanciation de l'objet, en plus de la couleur, du nombre de sièges et de l'énergie. Il a également une méthode qui permet de savoir s’il est plein ou non. Celle-ci retourne in filling quand il n'est pas plein et full quand il est plein.
+
+N'oublie pas les getters et les setters !!
