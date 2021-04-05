@@ -5,20 +5,24 @@
 class Vehicle
 {
  
-    private string $color;
-    private int $currentSpeed;
-    private int $nbSeats;
-    private int $nbWheels;
+    protected string $color;
+    protected int $currentSpeed;
+    protected int $nbSeats;
+    protected int $nbWheels;
 
     public function __construct(string $color, int $nbSeats)
     {
         $this->color = $color;
         $this->nbSeats = $nbSeats;
+        $this->currentSpeed = 0;
     }
 
+    final public function start() {
+        echo   'I start!';
+    }
+    
     public function forward(): string
     {
-        $this->currentSpeed = 0;
         return "Go !";
     }
 
