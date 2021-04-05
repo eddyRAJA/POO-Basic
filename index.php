@@ -1,15 +1,16 @@
 <?php
-require_once 'Bicycle.php';
-require_once 'Car.php';
-require_once 'Truck.php';
+//require_once 'Bicycle.php';
+//require_once 'Car.php';
 
+
+/*
 $bike = new Bicycle('blue', 1);
 $bike->setNbWheels(2);
 var_dump($bike);
 
 //   TEST FOR BIKE
 
-echo '**********************THE BIKER said:    ' /*. ($bike->start())*/;
+echo '**********************THE BIKER said:    ' /*. ($bike->start())*/;/*
 var_dump($bike->start());
 
 echo $bike->forward();
@@ -42,9 +43,9 @@ echo '<br> Vitesse du véhicule: ' . $flashMcQueen->getCurrentSpeed() . ' km/h' 
 echo $flashMcQueen->brake();
 
 
-var_dump($flashMcQueen);
+var_dump($flashMcQueen);*/
 
-
+require_once 'Truck.php';
 var_dump(Truck::ALLOWED_LOADINGSTATE);
 
 $meatTruck = new Truck('green', 3, 'electric', 20);
