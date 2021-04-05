@@ -3,7 +3,7 @@ require_once 'Bicycle.php';
 require_once 'Car.php';
 
 $bike = new Bicycle('blue', 1);
-//echo $bike->forward();
+$bike->setNbWheels(2);
 var_dump($bike);
 
 //   TEST FOR BIKE
