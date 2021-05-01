@@ -1,67 +1,33 @@
 <?php
 require_once 'Bicycle.php';
 require_once 'Car.php';
-require_once 'Truck.php';
-
-$bike = new Bicycle('blue', 1);
-$bike->setNbWheels(2);
-var_dump($bike);
-
-//   TEST FOR BIKE
-
-echo '**********************THE BIKER said:    ' /*. ($bike->start())*/;
-var_dump($bike->start());
-
-echo $bike->forward();
-
-$bike->setCurrentSpeed(9);
-echo '<br> Vitesse du vélo : ' . $bike->getCurrentSpeed() . ' km/h' . '<br>';
-echo $bike->brake();
-echo '<br> Vitesse du vélo : ' . $bike->getCurrentSpeed() . ' km/h' . '<br>';
-echo $bike->brake();
+require_once 'SkateBoard.php';
 
 
-//    TEST FOR A CAR 
+echo "TEST FOR BIKE";
 
-var_dump(Car::ALLOWED_ENERGIES);
+$eBike = new Bicycle('blue', 1, true);
+$mBike = new Bicycle('blue', 1, false);
+
+var_dump($eBike);
+var_dump($eBike->switchOn());
+var_dump($eBike->switchOff());
+
+var_dump($mBike);
+var_dump($mBike->switchOn());
+var_dump($mBike->switchOff());
+
+
+
+echo "TEST FOR CAR";
 
 $flashMcQueen = new Car('red', 2, 'fuel'); 
 
 var_dump($flashMcQueen);
-      
-var_dump($flashMcQueen->getCurrentSpeed());
+var_dump($flashMcQueen->switchOn());
+var_dump($flashMcQueen->switchOff());
 
-echo '******************FLASH Mc QUEEN said:   ';
-var_dump($flashMcQueen->start()); 
-echo $flashMcQueen->forward();
-$flashMcQueen->setCurrentSpeed(256);
-$flashMcQueen->setLevelEnergy(80);
-echo '<br> Vitesse du véhicule : ' . $flashMcQueen->getCurrentSpeed() . ' km/h' . '<br>';
-echo $flashMcQueen->brake();
-echo '<br> Vitesse du véhicule: ' . $flashMcQueen->getCurrentSpeed() . ' km/h' . '<br>';
-echo $flashMcQueen->brake();
+echo " NO TEST FOR SKATEbOARD";
 
-
-var_dump($flashMcQueen);
-
-
-var_dump(Truck::ALLOWED_LOADINGSTATE);
-
-$meatTruck = new Truck('green', 3, 'electric', 20);
-var_dump($meatTruck);
-
-var_dump($meatTruck->getCurrentSpeed());
-$meatTruck->setLoadingState('full');      //Truck loading
-
-echo '********************************The TRUCKER said:   ';
-var_dump($meatTruck->start()); 
-echo $meatTruck->forward();
-$meatTruck->setCurrentSpeed(110);   // Km/h
-$meatTruck->setLevelEnergy(30);      // Percent
-echo '<br> Vitesse du camion : ' . $meatTruck->getCurrentSpeed() . ' km/h' . '<br>';
-echo $meatTruck->brake();
-echo '<br> Vitesse du camion: ' . $meatTruck->getCurrentSpeed() . ' km/h' . '<br>';
-echo $meatTruck->brake();
-
-
-var_dump($meatTruck);
+$mySkate = new SkateBoard('orange', 0);
+var_dump($mySkate);

@@ -1,12 +1,8 @@
-# POO-Basic Part 2
-Créer ta première classe enfant,
 
-Après les classes Car et Bicycle, tu dois créer une classe permettant de manipuler un objet camion.
+POO - Basics | Part 5 : Implémentation d'interfaces
+Et la lumière fut !
+Créer une interface LightableInterface possédant les méthodes switchOn() et switchOff().Ces méthodes seront implémentées par les véhicules possédant des éclairages comme Car et Bike, mais pas SkateBoard (cette dernière est à créer si ce n’est déjà fait).
 
-Un camion est un enfant de Vehicle et a des propriétés spécifiques :
+Dans la classe Car, switchOn() retourne true et switchOff() retournera false.
 
--sa capacité de stockage. -son chargement, qui est initialement à zéro.
-
-La capacité de stockage doit être saisie au moment de l'Instanciation de l'objet, en plus de la couleur, du nombre de sièges et de l'énergie. Il a également une méthode qui permet de savoir s’il est plein ou non. Celle-ci retourne in filling quand il n'est pas plein et full quand il est plein.
-
-N'oublie pas les getters et les setters !!
+Dans la classe Bike, où une dynamo est utilisée, switchOn() retourne true seulement si la currentSpeed() est >10km/h, tandis que switchOff() retourne toujours false.

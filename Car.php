@@ -1,10 +1,11 @@
 <?php
 
 require_once 'Vehicle.php';
+require_once 'LightableInterface.php';
 
 //child class Car
 
-class Car extends Vehicle {
+class Car extends Vehicle implements LightableInterface {
 
     private string $energy;
     private int $levelEnergy;
@@ -44,5 +45,17 @@ class Car extends Vehicle {
     {
         $this->levelEnergy = $levelEnergy;
     }
+
+    public function switchOn() 
+    {
+        return true;
+    }
+
+    public function switchOff() 
+    {
+        return false;
+    }
+
+
         
 }
