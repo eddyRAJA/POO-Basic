@@ -16,11 +16,12 @@ class Vehicle
         $this->nbSeats = $nbSeats;
         $this->currentSpeed = 0;
     }
-
-    final public function start() {
+    /*
+    public function start() {
         echo   'I start!';
     }
-    
+    */
+
     public function forward(): string
     {
         return "Go !";

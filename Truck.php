@@ -57,7 +57,15 @@ class Truck extends Vehicle {
     {
         $this->levelEnergy = $levelEnergy;
     }
-    
+
+    public function isFullEnergy()
+    {
+        if($this->getLevelEnergy() === 100) {
+            return 'Energy is full!';
+        }else {
+            return 'Energy level: ' . $this->getLevelEnergy() . ' percent';
+        }
+    }
     public function getStorageCapacity(): int
     {
         return $this->storageCapacity;

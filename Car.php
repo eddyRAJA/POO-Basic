@@ -8,6 +8,7 @@ class Car extends Vehicle {
 
     private string $energy;
     private int $levelEnergy;
+    private bool $hasParkBrake;
 
     public const ALLOWED_ENERGIES = ['fuel', 'electric'];
 
@@ -20,7 +21,15 @@ class Car extends Vehicle {
         //$this->energy = $energy;
         $this->setEnergy($energy);
         $this->levelEnergy = 100;
-        $this->nbWheels = 4;    
+        $this->nbWheels = 4; 
+        $this->hasParkBrake = true;   
+    }
+
+    public function start() {
+        if($this->hasParkBrake === true){
+            throw new Exception("Handbrake actived");
+        }
+
     }
 
     public function getEnergy(): string
@@ -45,4 +54,26 @@ class Car extends Vehicle {
         $this->levelEnergy = $levelEnergy;
     }
         
+
+    /**
+     * Get the value of hasParkBrake
+     */ 
+    public function getHasParkBrake()
+    {
+        return $this->hasParkBrake;
+    }
+
+    /**
+     * Set the value of hasParkBrake
+     *
+     * @return  self
+     */ 
+    public function setParkBrake()
+    {
+        if($this->hasParkBrake === false) {
+            $this->hasParkBrake === true;
+        } else {
+            $this->hasParkBrake === false;
+        }
+    }    
 }
